@@ -2,8 +2,12 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="icon" href="assets/logo.svg" type="image/svg+xml" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0
+    maximum-scale=1.0, user-scalable=0"
+    />
+    <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
     <link rel="stylesheet" href="styles.css" />
 
     <link
@@ -15,11 +19,11 @@
   </head>
   <body>
     <main>
-      <img src="assets/intro-smoke.png" class="intro-smoke" />
+      <img src="assets/main-smoke.jpg" class="intro-smoke" />
       <div class="hero-card">
         <div class="intro-main">
           <div class="logo-box">
-            <img src="assets/full-logo.svg" class="logo" />
+            <img src="assets/full-logo.svg" />
             <span>The first and all-in-one Amazon Business platform</span>
           </div>
           <div class="intro-buttons">
@@ -39,9 +43,151 @@
         </div>
       </div>
     </main>
-    <section class="our-platform"></section>
-    <section></section>
-    <section></section>
-    <footer></footer>
+
+    <section class="our-platform">
+      <span class="title">Empowering Your Business Success</span>
+      <span class="sub-title">With one app and everything in one place</span>
+      <div class="card">
+        <img src="assets/our-platform-1.png" />
+        <div class="text-container">
+          <span class="card-title">Ave, your personal AI</span>
+          <span class="card-text"
+            >Your business-tailored AI will analyze your business across the
+            platform and highlight certain areas to attract your attention.
+          </span>
+          <ul class="card-text card-points">
+            <li>Comprehensive analysis into business performance</li>
+            <li>Highlights of certain areas to attract your attention</li>
+            <li>Answers for all your business questions</li>
+          </ul>
+        </div>
+      </div>
+      <div class="card">
+        <img src="assets/our-platform-2.png" />
+        <div class="text-container">
+          <span class="card-title">Ave, your personal AI</span>
+          <span class="card-text"
+            >Your business-tailored AI will analyze your business across the
+            platform and highlight certain areas to attract your attention.
+          </span>
+          <ul class="card-text card-points">
+            <li>Comprehensive analysis into business performance</li>
+            <li>Highlights of certain areas to attract your attention</li>
+            <li>Answers for all your business questions</li>
+          </ul>
+        </div>
+      </div>
+      <div class="card">
+        <img src="assets/our-platform-3.png" />
+        <div class="text-container">
+          <span class="card-title">Ave, your personal AI</span>
+          <span class="card-text"
+            >Your business-tailored AI will analyze your business across the
+            platform and highlight certain areas to attract your attention.
+          </span>
+          <ul class="card-text card-points">
+            <li>Comprehensive analysis into business performance</li>
+            <li>Highlights of certain areas to attract your attention</li>
+            <li>Answers for all your business questions</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="why">
+      <span class="title">Why Averecs?</span>
+      <div class="bubbles-container">
+        <div class="bubble">
+          <span>Reduce costs</span>
+          <span>Just pay for one platform with everything you need</span>
+        </div>
+        <div class="bubble">
+          <span>Simplify your business</span>
+          <span>Just pay for one platform with everything you need</span>
+        </div>
+        <div class="bubble">
+          <span>Built for you</span>
+          <span>Just pay for one platform with everything you need</span>
+        </div>
+        <div class="bubble">
+          <span>Better UX, less clicks and simply beautiful</span>
+        </div>
+        <div class="logo-bubble">
+          <img src="assets/logo.svg" />
+        </div>
+        <div class="main-bubble"></div>
+        <img class="smoke" src="assets/smoke-why.jpg" />
+      </div>
+    </section>
+
+    <section class="our-team">
+      <span class="title">Our team</span>
+      <span class="sub-title">
+        A multi-disciplinar team of eager people trying to disrup the Amazon
+        Business world
+      </span>
+      <div class="cards-container">
+        <div class="card">
+          <img src="assets/our-team-1.png" />
+          <span class="card-title">Daniel Rickwood</span>
+          <span class="card-text">Co-Founder</span>
+        </div>
+
+        <div class="card">
+          <img src="assets/our-team-2.png" />
+          <span class="card-title">Abel Antunez</span>
+          <span class="card-text">Co-Founder</span>
+        </div>
+
+        <div class="card">
+          <img src="assets/our-team-3.png" />
+          <span class="card-title">Alfonso Mateos</span>
+          <span class="card-text">Co-Founder</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="contact-us">
+      <span class="title">Contact us</span>
+      <span class="sub-title">
+        Would you like to know more? Just drop us a message
+      </span>
+      <div class="card">
+        <form action="https://formspree.io/f/xzzppnod" method="POST">
+          <div class="form-group">
+            <label>Name</label>
+            <input
+              type="text"
+              name="name"
+              placeholder="John Doe"
+              class="avr-input"
+            />
+          </div>
+          <div class="form-group">
+            <label>Email</label>
+            <input
+              type="email"
+              name="name"
+              placeholder="john.doe@email.com"
+              class="avr-input"
+            />
+          </div>
+          <div class="form-group">
+            <label>Your message</label>
+            <textarea
+              name="message"
+              rows="5"
+              placeholder="Hello! I would like to participate in your project..."
+              class="avr-textarea"
+            ></textarea>
+          </div>
+          <button class="avr-button" type="submit">Submit</button>
+        </form>
+      </div>
+    </section>
+
+    <footer>
+      <span>© 2024 Averecs Limited - All rights reserved</span>
+    </footer>
   </body>
 </html>
