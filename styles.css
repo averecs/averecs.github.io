@@ -23,10 +23,12 @@
 html {
   overflow-x: hidden;
   font-family: "Roboto", sans-serif;
+
+  scroll-behavior: smooth;
 }
 
 /* Main section */
-main .intro-smoke {
+main .smoke {
   position: absolute;
   top: 0;
   right: 0;
@@ -130,21 +132,10 @@ main .coming-soon img {
 }
 
 /* First section: our platform */
-.our-platform-smoke {
+.our-platform .smoke {
   position: absolute;
   z-index: -10;
-  width: 100vw;
-  height: 50rem;
-}
-
-.our-platform-smoke:first-of-type {
-  top: -10rem;
-}
-
-.our-platform-smoke:last-of-type {
-  left: 0;
-  bottom: -10rem;
-  transform: rotate(-180deg);
+  width: 25rem;
 }
 
 .our-platform {
@@ -212,9 +203,15 @@ main .coming-soon img {
 
 .our-platform .card .card-points li::before {
   content: "•";
-  padding-right: 0.5rem;
   color: var(--avr-color-surface);
   font-size: 2rem;
+
+  padding-right: 0.5rem;
+}
+
+.our-platform .card:nth-of-type(2) .card-points li::before {
+  padding-right: 0;
+  padding-left: 0.5rem;
 }
 
 .our-platform .card:nth-of-type(2) {
@@ -333,7 +330,6 @@ main .coming-soon img {
   z-index: -1;
 
   width: 32.5rem;
-  height: 30rem;
 }
 
 .our-team {
@@ -412,7 +408,7 @@ form .form-group {
   flex-direction: column;
   gap: 0.5rem;
   color: var(--avr-color-primary-500);
-  font-size: 1rem;
+  font-size: 1.25rem;
   font-weight: var(--avr-text-roboto-thin);
 }
 
@@ -450,6 +446,7 @@ footer .smoke {
   border-radius: 2rem;
   padding: 0.5rem 1.5rem;
   border: 1px solid var(--avr-color-primary-500);
+  text-decoration: none;
   transition: opacity 0.1s ease-in-out;
 
   margin: 0;
@@ -469,7 +466,7 @@ footer .smoke {
 .avr-textarea {
   width: 100%;
   font-size: 1rem;
-  font-weight: var(--avr-text-roboto-regular);
+  font-weight: var(--avr-text-roboto-light);
   font-family: inherit;
   color: var(--avr-text-primary);
   border: 1px solid rgba(var(--avr-color-primary-500-rgba), 0.5);
@@ -502,7 +499,7 @@ footer .smoke {
 }
 
 section {
-  width: 95vw;
+  width: 85vw;
   margin: 0 auto;
   color: var(--avr-text-primary);
 
@@ -549,7 +546,7 @@ section {
 /* Media queries */
 @media screen and (min-width: 1024px) {
   /* [MEDIA] Main section */
-  main .intro-smoke {
+  main .smoke {
     width: 50rem;
   }
 
@@ -603,16 +600,8 @@ section {
 
   /* [MEDIA] First section: our platform */
 
-  .our-platform-smoke {
-    height: 45rem;
-  }
-
-  .our-platform-smoke:first-of-type {
-    top: -5rem;
-  }
-
-  .our-platform-smoke:last-of-type {
-    bottom: -10rem;
+  .our-platform .smoke {
+    width: 65rem;
   }
 
   .our-platform .card {
@@ -689,7 +678,6 @@ section {
   .our-team .smoke {
     top: -5rem;
     width: 65rem;
-    height: 60rem;
   }
 
   section.our-team .sub-title {
@@ -709,36 +697,40 @@ section {
 
 @media screen and (min-width: 1440px) {
   /* [MEDIA] Main section */
-  html {
-    font-size: 1.25rem;
-  }
-
-  /* [MEDIA] First section: our platform */
-  .our-platform-smoke {
-    height: 40rem;
-  }
-
   main {
     padding: 5rem 0;
   }
 
+  /* [MEDIA] First section: our platform */
   .our-platform .card {
     max-width: 50rem;
   }
-
-  /* [MEDIA] Second section: why */
-  /* [MEDIA] Third section: our team */
-  /* [MEDIA] Fourth section: contact us */
 }
 
 @media screen and (min-width: 1920px) {
   /* [MEDIA] Main section */
+  main .smoke {
+    width: 80rem;
+  }
 
   /* [MEDIA] First section: our platform */
+  .our-platform .card {
+    max-width: 60rem;
+  }
 
   /* [MEDIA] Second section: why */
+  .why .smoke {
+    width: 80rem;
+  }
   /* [MEDIA] Third section: our team */
+  .our-team .smoke {
+    height: 50rem;
+  }
   /* [MEDIA] Fourth section: contact us */
+  /* [MEDIA] Footer: contact info */
+  footer .smoke {
+    width: 65rem;
+  }
 }
 
 /* Animations */

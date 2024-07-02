@@ -20,29 +20,38 @@
   </head>
   <body>
     <main>
-      <img class="intro-smoke" src="assets/smoke-main.jpg" />
+      <img
+        class="smoke"
+        src="assets/smoke-main.jpg"
+        alt="Introduction secttion smoke decoration"
+      />
       <div class="hero-card">
         <div class="intro-main">
           <div class="logo-box">
             <div class="logo-container">
-              <img src="assets/full-logo.svg" />
+              <img src="assets/full-logo.svg" alt="Company logo Averecs" />
             </div>
             <span>The first and all-in-one Amazon Business platform</span>
           </div>
           <div class="intro-buttons">
-            <div class="notify-me">
+            <form
+              action="https://formspree.io/f/xzzppnod"
+              method="POST"
+              class="notify-me"
+            >
               <input
                 class="avr-input"
-                type="text"
+                type="email"
+                name="name"
                 placeholder="Enter email address"
               />
-              <button class="avr-button">Notify me</button>
-            </div>
-            <button class="avr-button">Contact us</button>
+              <button class="avr-button" type="submit">Notify me</button>
+            </form>
+            <a href="#contact-us" class="avr-button">Contact us</a>
           </div>
         </div>
         <div class="coming-soon">
-          <img src="assets/coming-soon.svg" />
+          <img src="assets/coming-soon.svg" alt="Coming soon illustration" />
         </div>
       </div>
     </main>
@@ -51,7 +60,7 @@
       <span class="title">Empowering Your Business Success</span>
       <span class="sub-title">With one app and everything in one place</span>
       <div class="card">
-        <img src="assets/our-platform-1.png" />
+        <img src="assets/our-platform-1.png" alt="Our platform example 1" />
         <div class="text-container">
           <span class="card-title">Ave, your personal AI</span>
           <span class="card-text"
@@ -66,7 +75,7 @@
         </div>
       </div>
       <div class="card">
-        <img src="assets/our-platform-2.png" />
+        <img src="assets/our-platform-2.png" alt="Our platform example 2" />
         <div class="text-container">
           <span class="card-title">Ave, your personal AI</span>
           <span class="card-text"
@@ -81,7 +90,7 @@
         </div>
       </div>
       <div class="card">
-        <img src="assets/our-platform-3.png" />
+        <img src="assets/our-platform-3.png" alt="Our platform example 3" />
         <div class="text-container">
           <span class="card-title">Ave, your personal AI</span>
           <span class="card-text"
@@ -95,8 +104,16 @@
           </ul>
         </div>
       </div>
-      <img class="our-platform-smoke" src="assets/smoke-our-platform.jpg" />
-      <img class="our-platform-smoke" src="assets/smoke-our-platform.jpg" />
+      <img
+        class="smoke"
+        src="assets/smoke-our-platform.jpg"
+        alt="Our platform smoke decoration 1"
+      />
+      <!-- <img
+        class="smoke"
+        src="assets/smoke-our-platform.jpg"
+        alt="Our platform smoke decoration 2"
+      /> -->
     </section>
 
     <section class="why">
@@ -118,10 +135,14 @@
           <span>Better UX, less clicks and simply beautiful</span>
         </div>
         <div class="logo-bubble">
-          <img src="assets/logo.svg" />
+          <img src="assets/logo.svg" alt="Logo in Why Averecs section" />
         </div>
         <div class="main-bubble"></div>
-        <img class="smoke" src="assets/smoke-why.jpg" />
+        <img
+          class="smoke"
+          src="assets/smoke-why.jpg"
+          alt="Why Averecs smoke decoration 1"
+        />
       </div>
     </section>
 
@@ -133,33 +154,37 @@
       </span>
       <div class="cards-container">
         <div class="card">
-          <img src="assets/our-team-1.png" />
+          <img src="assets/our-team-1.png" alt="Our team 1" />
           <span class="card-title">Daniel Rickwood</span>
           <span class="card-text">Co-Founder</span>
         </div>
 
         <div class="card">
-          <img src="assets/our-team-2.png" />
+          <img src="assets/our-team-2.png" alt="Our team 2" />
           <span class="card-title">Abel Antunez</span>
           <span class="card-text">Co-Founder</span>
         </div>
 
         <div class="card">
-          <img src="assets/our-team-3.png" />
+          <img src="assets/our-team-3.png" alt="Our team 3" />
           <span class="card-title">Alfonso Mateos</span>
           <span class="card-text">Co-Founder</span>
         </div>
       </div>
-      <img class="smoke" src="assets/smoke-our-team.jpg" />
+      <img
+        class="smoke"
+        src="assets/smoke-our-team.jpg"
+        alt="Our team smoke decoration"
+      />
     </section>
 
-    <section class="contact-us">
+    <section id="contact-us" class="contact-us">
       <span class="title">Contact us</span>
       <span class="sub-title">
         Would you like to know more? Just drop us a message
       </span>
       <div class="card">
-        <form action="https://formspree.io/f/xzzppnod" method="POST">
+        <form action="https://formspree.io/f/mjkbvwvv" method="POST">
           <div class="form-group">
             <label>Name</label>
             <input
@@ -173,7 +198,7 @@
             <label>Email</label>
             <input
               type="email"
-              name="name"
+              name="email"
               placeholder="john.doe@email.com"
               class="avr-input"
             />
@@ -194,7 +219,11 @@
 
     <footer>
       <span>© 2024 Averecs Limited - All rights reserved</span>
-      <img class="smoke" src="assets/smoke-footer.jpg" />
+      <img
+        class="smoke"
+        src="assets/smoke-footer.jpg"
+        alt="Footer smoke decoration"
+      />
     </footer>
   </body>
 </html>
