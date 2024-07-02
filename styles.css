@@ -26,35 +26,37 @@ html {
 }
 
 /* Main section */
-.intro-smoke {
+main .intro-smoke {
   position: absolute;
   top: 0;
   right: 0;
+  z-index: -1;
 
-  width: 500px;
+  width: 31.5rem;
   height: auto;
 }
 
 main {
   width: 100%;
-  background: var(--avr-color-surface);
 
   display: flex;
   justify-content: center;
   align-items: center;
 
-  padding: 5vh 0;
+  padding: 2.5rem 0;
 }
 
 main .hero-card {
   position: relative;
-  z-index: 10;
   width: 85vw;
+  max-width: 90rem;
+  max-height: 48rem;
 
   background-color: rgba(var(--avr-color-surface-rgb), 0.32);
   border-radius: 50px;
   border: 1px solid var(--avr-color-surface);
   box-shadow: 0 4px 4px 0 rgba(var(--avr-color-primary-500-rgba), 0.1);
+  backdrop-filter: blur(5px);
 
   display: flex;
   flex-direction: column;
@@ -63,39 +65,46 @@ main .hero-card {
   gap: 3rem;
   overflow: hidden;
 
-  padding: 2.5rem 0;
+  padding: 20vw 10vw;
 }
 
 main .intro-main {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 3rem;
+}
+
+main .logo-box {
   width: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap: 3rem;
+  gap: 1rem;
 }
 
-main .logo-box {
+.logo-box .logo-container {
   display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  gap: 1rem;
-  text-align: center;
+  align-items: flex-end;
+  width: 100%;
 }
 
 .logo-box img {
-  width: 12rem;
+  width: 100%;
 }
 
 main .logo-box span {
-  width: 15rem;
-  font-size: 1rem;
+  width: 100%;
+  font-size: 1.25rem;
   font-weight: var(--avr-text-roboto-thin);
   color: var(--avr-text-primary);
+
+  text-align: center;
 }
 
 main .intro-buttons {
+  width: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -104,6 +113,7 @@ main .intro-buttons {
 }
 
 main .notify-me {
+  width: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -111,36 +121,56 @@ main .notify-me {
   gap: 0.5rem;
 }
 
+main .coming-soon {
+  display: flex;
+}
+
 main .coming-soon img {
-  width: 9rem;
-  height: auto;
+  width: 100%;
 }
 
 /* First section: our platform */
+.our-platform-smoke {
+  position: absolute;
+  z-index: -10;
+  width: 100vw;
+  height: 50rem;
+}
+
+.our-platform-smoke:first-of-type {
+  top: -10rem;
+}
+
+.our-platform-smoke:last-of-type {
+  left: 0;
+  bottom: -10rem;
+  transform: rotate(-180deg);
+}
+
+.our-platform {
+  position: relative;
+}
+
 .our-platform .card {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   gap: 2rem;
+  width: 85vw;
 
   background-color: rgba(var(--avr-color-surface-rgb), 0.32);
   border-radius: 32px;
   border: 1px solid var(--avr-color-surface);
   box-shadow: 0 4px 4px 0 rgba(var(--avr-color-primary-500-rgba), 0.1);
+  backdrop-filter: blur(5px);
   overflow: hidden;
 
   padding: 1rem 1.5rem;
-  margin-bottom: 2.5rem;
-
-  max-width: 85vw;
+  margin-top: 2.5rem;
 }
 
-.our-platform img {
-  /* min-width: 16rem; */
-  /* min-height: 23rem; */
-  /* width: 100px;
-  height: 100px; */
+.our-platform .card img {
   width: 100%;
 
   border: 2px solid var(--avr-color-surface);
@@ -188,12 +218,7 @@ main .coming-soon img {
 }
 
 .our-platform .card:nth-of-type(2) {
-  /* flex-direction: row-reverse; */
   flex-direction: column;
-}
-
-.our-platform .card:nth-of-type(2) .text-container {
-  /* text-align: right; */
 }
 
 .our-platform .card:nth-of-type(2) .card-title {
@@ -236,7 +261,7 @@ main .coming-soon img {
   justify-content: center;
   align-items: center;
 
-  font-size: 0.75rem;
+  font-size: 1rem;
   font-weight: var(--avr-text-roboto-light);
   text-align: center;
 
@@ -273,6 +298,9 @@ main .coming-soon img {
   border: 1px solid rgba(var(--avr-color-surface-rgb), 0.6);
 
   position: absolute;
+
+  display: flex;
+  gap: 0.25rem;
 }
 
 .why .bubble span {
@@ -281,7 +309,6 @@ main .coming-soon img {
 
 .why .bubble span:first-of-type {
   font-weight: var(--avr-text-roboto-regular);
-  margin-bottom: 0.25rem;
 }
 
 .why .bubble:nth-of-type(1) {
@@ -301,7 +328,19 @@ main .coming-soon img {
 }
 
 /* Third section: our team */
-section.our-team .sub-title {
+.our-team .smoke {
+  position: absolute;
+  z-index: -1;
+
+  width: 32.5rem;
+  height: 30rem;
+}
+
+.our-team {
+  position: relative;
+}
+
+.our-team .sub-title {
   width: 80vw;
 }
 
@@ -309,6 +348,7 @@ section.our-team .sub-title {
   display: flex;
   flex-direction: column;
   gap: 1rem;
+  margin-top: 2.5rem;
 }
 
 .our-team .card {
@@ -352,8 +392,10 @@ section.our-team .sub-title {
   box-shadow: 0 4px 4px 0 rgba(var(--avr-color-primary-500-rgba), 0.1);
   overflow: hidden;
 
-  width: 80vw;
+  width: 85vw;
+  max-width: 64.5rem;
   padding: 2.5rem 2rem;
+  margin-top: 2.5rem;
 }
 
 form {
@@ -376,6 +418,7 @@ form .form-group {
 
 /* Footer: contact info */
 footer {
+  position: relative;
   text-align: center;
   margin-top: 10rem;
 }
@@ -388,6 +431,16 @@ footer span {
   padding: 2rem 0;
 }
 
+footer .smoke {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  z-index: -1;
+
+  width: 50rem;
+  height: auto;
+}
+
 /* Reusable styles */
 .avr-button {
   font-size: 1rem;
@@ -396,8 +449,10 @@ footer span {
   font-weight: var(--avr-text-roboto-regular);
   border-radius: 2rem;
   padding: 0.5rem 1.5rem;
-  border: none;
+  border: 1px solid var(--avr-color-primary-500);
   transition: opacity 0.1s ease-in-out;
+
+  margin: 0;
 }
 
 .avr-button:hover {
@@ -412,7 +467,8 @@ footer span {
 
 .avr-input,
 .avr-textarea {
-  font-size: 0.875rem;
+  width: 100%;
+  font-size: 1rem;
   font-weight: var(--avr-text-roboto-regular);
   font-family: inherit;
   color: var(--avr-text-primary);
@@ -426,7 +482,7 @@ footer span {
 
 .avr-input::placeholder,
 .avr-textarea::placeholder {
-  font-size: 0.875rem;
+  font-size: 1rem;
   font-weight: var(--avr-text-roboto-thin);
   color: rgba(var(--avr-color-primary-500-rgba), 0.5);
 }
@@ -489,48 +545,208 @@ main,
 section {
   margin-bottom: 7.5rem;
 }
-/* TODO: media queries have to go to the end, this is plain css.. */
 
 /* Media queries */
-/* @media screen and (max-width: 1280px) {
-  .hero-card {
-    flex-direction: column;
-    padding: 7.5rem 0;
+@media screen and (min-width: 1024px) {
+  /* [MEDIA] Main section */
+  main .intro-smoke {
+    width: 50rem;
+  }
+
+  main {
+    padding: 4rem 0;
+  }
+
+  main .hero-card {
+    flex-direction: row;
+    padding: 10vw 5vw;
+    gap: 2.5rem;
+  }
+
+  main .logo-box {
+    flex-direction: row;
+    align-items: flex-end;
+  }
+
+  main .logo-box span {
+    font-size: 1.125rem;
+    text-align: start;
+    max-width: 11.25rem;
+  }
+
+  main .intro-buttons {
+    flex-direction: row;
+    gap: 1rem;
+  }
+
+  main .notify-me {
+    flex-direction: row;
+    width: auto;
+    flex-grow: 1;
+  }
+
+  main .notify-me button {
+    margin-left: -5rem;
+    height: 100%;
+  }
+
+  main .notify-me .avr-input {
+    flex-grow: 1;
+    width: auto;
+    height: 2.25rem;
+  }
+
+  main .coming-soon {
+    display: flex;
+    align-items: center;
+  }
+
+  /* [MEDIA] First section: our platform */
+
+  .our-platform-smoke {
+    height: 45rem;
+  }
+
+  .our-platform-smoke:first-of-type {
+    top: -5rem;
+  }
+
+  .our-platform-smoke:last-of-type {
+    bottom: -10rem;
+  }
+
+  .our-platform .card {
+    flex-direction: row;
+    margin-top: 3rem;
+    max-width: 50rem;
+  }
+
+  .our-platform .card img {
+    width: 20rem;
+    flex-grow: 1;
+  }
+
+  .our-platform .text-container {
+    width: 100%;
+    max-width: 23.5rem;
+  }
+
+  .our-platform .card:nth-of-type(2) {
+    flex-direction: row-reverse;
+  }
+
+  .our-platform .card:nth-of-type(2) .text-container {
+    text-align: right;
+  }
+
+  .our-platform .card:nth-of-type(2) .card-points li {
+    flex-direction: row-reverse;
+  }
+
+  /* [MEDIA] Second section: why */
+  .why .smoke {
+    width: 52rem;
+    height: 55rem;
+  }
+
+  .why .bubbles-container {
+    min-height: 45rem;
+  }
+
+  .why .main-bubble {
+    width: 25rem;
+    height: 25rem;
+  }
+
+  .why .logo-bubble {
+    width: 14rem;
+    height: 14rem;
+    padding: 3.5rem;
+  }
+
+  .why .bubble {
+    width: 16rem;
+    height: 16rem;
+  }
+
+  .why .bubble:nth-of-type(1) {
+    transform: translate(calc(-50% - 5rem), calc(-50% - 5rem));
+  }
+
+  .why .bubble:nth-of-type(2) {
+    transform: translate(calc(50% + 5rem), calc(-50% - 5rem));
+  }
+
+  .why .bubble:nth-of-type(3) {
+    transform: translate(calc(-50% - 5rem), calc(50% + 5rem));
+  }
+
+  .why .bubble:nth-of-type(4) {
+    transform: translate(calc(50% + 5rem), calc(50% + 5rem));
+  }
+
+  /* [MEDIA] Third section: our team */
+  .our-team .smoke {
+    top: -5rem;
+    width: 65rem;
+    height: 60rem;
+  }
+
+  section.our-team .sub-title {
+    width: 35vw;
+  }
+
+  .our-team .cards-container {
+    flex-direction: row;
+    gap: 2.5rem;
+  }
+
+  /* [MEDIA] Fourth section: contact us */
+  .contact-us .card {
+    max-width: 35rem;
   }
 }
 
-@media screen and (max-width: 1024px) {
-  .hero-card {
-    gap: 5rem;
+@media screen and (min-width: 1440px) {
+  /* [MEDIA] Main section */
+  html {
+    font-size: 1.25rem;
+  }
+
+  /* [MEDIA] First section: our platform */
+  .our-platform-smoke {
+    height: 40rem;
+  }
+
+  main {
     padding: 5rem 0;
   }
 
-  .intro-main {
-    align-items: center;
+  .our-platform .card {
+    max-width: 50rem;
   }
 
-  .logo-box {
-    flex-direction: column;
-    align-items: center;
-    gap: 1.5rem;
-  }
+  /* [MEDIA] Second section: why */
+  /* [MEDIA] Third section: our team */
+  /* [MEDIA] Fourth section: contact us */
+}
 
-  .intro-buttons {
-    justify-content: center;
-  }
+@media screen and (min-width: 1920px) {
+  /* [MEDIA] Main section */
 
-  .logo-box span {
-    width: 100%;
-  }
+  /* [MEDIA] First section: our platform */
 
-  .avr-input {
-    min-width: 15rem;
-  }
-} */
+  /* [MEDIA] Second section: why */
+  /* [MEDIA] Third section: our team */
+  /* [MEDIA] Fourth section: contact us */
+}
 
-/* TODO: for later - try mobile first maybe and handle all zooms */
-/* @media screen and (min-width: 2250px) {
-  :root {
-    font-size: 1.3em;
-  }
-} */
+/* Animations */
+.hidden {
+  opacity: 0;
+  transition: all 1s ease-in-out;
+}
+
+.show {
+  opacity: 1;
+}
