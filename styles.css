@@ -329,7 +329,9 @@ main .coming-soon img {
   position: absolute;
   z-index: -1;
 
-  width: 32.5rem;
+  width: 45rem;
+  height: 60rem;
+  bottom: -17.5rem;
 }
 
 .our-team {
@@ -341,10 +343,8 @@ main .coming-soon img {
 }
 
 .our-team .cards-container {
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
-  margin-top: 2.5rem;
+  position: relative;
+  width: 100vw;
 }
 
 .our-team .card {
@@ -358,12 +358,56 @@ main .coming-soon img {
   flex-direction: column;
   align-items: center;
 
-  padding: 1.5rem 1rem;
+  padding: 2rem 1rem;
+
+  /* Carousel styles */
+  flex-shrink: 0;
+  scroll-snap-align: center;
+}
+
+.our-team .slider {
+  display: flex;
+  flex-shrink: 0;
+  gap: 1rem;
+
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+
+  padding: 2rem 0;
+}
+
+.our-team .indicators {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 0.5rem;
+}
+
+.our-team .indicator {
+  width: 0.5rem;
+  height: 0.5rem;
+  border-radius: 50%;
+  background-color: var(--avr-color-surface);
+  opacity: 0.25;
+}
+
+.our-team .active {
+  opacity: 1;
+}
+
+.our-team .spacer {
+  width: 2.5rem;
+  height: 10rem;
+  flex-shrink: 0;
 }
 
 .our-team .card img {
-  width: 10rem;
-  height: auto;
   padding-bottom: 1rem;
 }
 
@@ -371,13 +415,14 @@ main .coming-soon img {
   font-size: 1rem;
   font-weight: var(--avr-text-roboto-medium);
   color: var(--avr-color-primary-500);
-  margin-bottom: 0.5rem;
+  margin-bottom: 1rem;
 }
 
 .our-team .card .card-text {
   font-size: 0.875rem;
   font-weight: var(--avr-text-roboto-light);
   color: var(--avr-text-primary);
+  padding-bottom: 0.5rem;
 }
 
 /* Fourth section: contact us */
@@ -684,9 +729,19 @@ section {
     width: 35vw;
   }
 
-  .our-team .cards-container {
+  .our-team .slider {
+    display: flex;
+    justify-content: center;
     flex-direction: row;
-    gap: 2.5rem;
+  }
+
+  .our-team .indicators,
+  .our-team .spacer {
+    display: none;
+  }
+
+  .our-team .card img {
+    width: 10rem;
   }
 
   /* [MEDIA] Fourth section: contact us */
@@ -704,6 +759,15 @@ section {
   /* [MEDIA] First section: our platform */
   .our-platform .card {
     max-width: 50rem;
+  }
+
+  /* [MEDIA] Third section: our team */
+  .our-team .card img {
+    width: 12.5rem;
+  }
+
+  .our-team .slider {
+    gap: 1.5rem;
   }
 }
 
