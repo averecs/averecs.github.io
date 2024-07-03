@@ -2,10 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1.0 maximum-scale=1.0, user-scalable=0"
-    />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
     <link rel="stylesheet" href="styles.css" />
 
@@ -38,13 +35,14 @@
               method="POST"
               class="notify-me"
             >
+              <button class="avr-button" type="submit">Notify me</button>
+
               <input
                 class="avr-input"
                 type="email"
                 name="name"
                 placeholder="Enter email address"
               />
-              <button class="avr-button" type="submit">Notify me</button>
             </form>
             <a href="#contact-us" class="avr-button">Contact us</a>
           </div>
@@ -52,13 +50,31 @@
         <div class="coming-soon">
           <img src="assets/coming-soon.svg" alt="Coming soon illustration" />
         </div>
+
+        <div class="intro-buttons mobile">
+          <form
+            action="https://formspree.io/f/xzzppnod"
+            method="POST"
+            class="notify-me"
+          >
+            <input
+              class="avr-input"
+              type="email"
+              name="name"
+              placeholder="Enter email address"
+            />
+            <button class="avr-button" type="submit">Notify me</button>
+          </form>
+          <a href="#contact-us" class="avr-button">Contact us</a>
+        </div>
       </div>
     </main>
 
     <section class="our-platform">
-      <span class="title">Empowering Your Business Success</span>
-      <span class="sub-title">With one app and everything in one place</span>
+      <span class="title">Empowering Your Success</span>
+      <span class="sub-title">With one app and all in one place</span>
       <div class="card">
+        <span class="card-title-mobile">Ave, your personal AI</span>
         <a href="/assets/our-platform-1.png">
           <img src="assets/our-platform-1.png" alt="Our platform example 1" />
         </a>
@@ -76,6 +92,7 @@
         </div>
       </div>
       <div class="card">
+        <span class="card-title-mobile">Ave, your personal AI</span>
         <a href="/assets/our-platform-2.png">
           <img src="assets/our-platform-2.png" alt="Our platform example 2" />
         </a>
@@ -93,6 +110,7 @@
         </div>
       </div>
       <div class="card">
+        <span class="card-title-mobile">Ave, your personal AI</span>
         <a href="/assets/our-platform-3.png">
           <img src="assets/our-platform-3.png" alt="Our platform example 3" />
         </a>
@@ -112,6 +130,11 @@
       <img
         class="smoke"
         src="assets/smoke-our-platform.jpg"
+        alt="Our platform smoke decoration 1"
+      />
+      <img
+        class="smoke-mobile"
+        src="assets/smoke-our-platform-mobile.jpg"
         alt="Our platform smoke decoration 1"
       />
     </section>
