@@ -18,7 +18,7 @@
     <main>
       <img
         class="smoke"
-        src="assets/smoke-main.jpg"
+        src="assets/smoke-main.webp"
         alt="Introduction secttion smoke decoration"
       />
       <div class="hero-card">
@@ -48,7 +48,15 @@
           </div>
         </div>
         <div class="coming-soon">
-          <img src="assets/coming-soon.svg" alt="Coming soon illustration" />
+          <div class="text">
+            <span>Coming soon</span>
+            <span id="countdown">85</span>
+            <span>Days</span>
+          </div>
+          <div class="waves">
+            <div class="wave wave-1"></div>
+            <div class="wave wave-2"></div>
+          </div>
         </div>
 
         <div class="intro-buttons mobile">
@@ -71,12 +79,16 @@
     </main>
 
     <section class="our-platform">
-      <span class="title">Empowering Your Success</span>
-      <span class="sub-title">With one app and all in one place</span>
-      <div class="card">
+      <span class="title hidden">Empowering Your Success</span>
+      <span class="sub-title hidden">With one app and all in one place</span>
+      <div class="card hidden">
         <span class="card-title-mobile">Ave, your personal AI</span>
-        <a href="/assets/our-platform-1.png">
-          <img src="assets/our-platform-1.png" alt="Our platform example 1" />
+        <a href="/assets/our-platform-1.webp">
+          <img
+            src="assets/our-platform-1.webp"
+            loading="lazy"
+            alt="Our platform example 1"
+          />
         </a>
         <div class="text-container">
           <span class="card-title">Ave, your personal AI</span>
@@ -91,31 +103,39 @@
           </ul>
         </div>
       </div>
-      <div class="card">
-        <span class="card-title-mobile">Ave, your personal AI</span>
-        <a href="/assets/our-platform-2.png">
-          <img src="assets/our-platform-2.png" alt="Our platform example 2" />
+      <div class="card hidden">
+        <span class="card-title-mobile">Automated accounting</span>
+        <a href="/assets/our-platform-2.webp">
+          <img
+            src="assets/our-platform-2.webp"
+            loading="lazy"
+            alt="Our platform example 2"
+          />
         </a>
         <div class="text-container">
-          <span class="card-title">Ave, your personal AI</span>
-          <span class="card-text"
-            >Your business-tailored AI will analyze your business across the
-            platform and highlight certain areas to attract your attention.
+          <span class="card-title">Automated accounting</span>
+          <span class="card-text">
+            Our platform is designed to be as hands-free as possible when it
+            comes to accounting.
           </span>
           <ul class="card-text card-points">
-            <li>Comprehensive analysis into business performance</li>
-            <li>Highlights of certain areas to attract your attention</li>
-            <li>Answers for all your business questions</li>
+            <li>Automated bank feeds</li>
+            <li>Amazon accounting template</li>
+            <li>AI reconciliations</li>
           </ul>
         </div>
       </div>
-      <div class="card">
-        <span class="card-title-mobile">Ave, your personal AI</span>
-        <a href="/assets/our-platform-3.png">
-          <img src="assets/our-platform-3.png" alt="Our platform example 3" />
+      <div class="card hidden">
+        <span class="card-title-mobile">Seller hub</span>
+        <a href="/assets/our-platform-3.webp">
+          <img
+            src="assets/our-platform-3.webp"
+            loading="lazy"
+            alt="Our platform example 3"
+          />
         </a>
         <div class="text-container">
-          <span class="card-title">Ave, your personal AI</span>
+          <span class="card-title">Seller hub</span>
           <span class="card-text"
             >Your business-tailored AI will analyze your business across the
             platform and highlight certain areas to attract your attention.
@@ -129,20 +149,23 @@
       </div>
       <img
         class="smoke"
-        src="assets/smoke-our-platform.jpg"
+        src="assets/smoke-our-platform.webp"
+        loading="lazy"
         alt="Our platform smoke decoration 1"
       />
       <img
         class="smoke-mobile"
         src="assets/smoke-our-platform-mobile.jpg"
+        loading="lazy"
         alt="Our platform smoke decoration 1"
       />
     </section>
 
-    <section class="why">
+    <section class="why hidden">
       <span class="title">Why Averecs?</span>
-      <div class="bubbles-container">
-        <div class="bubble">
+      <div id="why-slider" class="bubbles-container">
+        <div class="spacer"></div>
+        <div class="bubble active">
           <span>Reduce costs</span>
           <span>Just pay for one platform with everything you need</span>
         </div>
@@ -157,63 +180,115 @@
         <div class="bubble">
           <span>Better UX, less clicks and simply beautiful</span>
         </div>
+        <div class="spacer"></div>
         <div class="logo-bubble">
           <img src="assets/logo.svg" alt="Logo in Why Averecs section" />
         </div>
         <div class="main-bubble"></div>
-        <img
-          class="smoke"
-          src="assets/smoke-why.jpg"
-          alt="Why Averecs smoke decoration 1"
-        />
+      </div>
+      <img
+        class="smoke"
+        src="assets/smoke-why.jpg"
+        loading="lazy"
+        alt="Why Averecs smoke decoration"
+      />
+      <img
+        class="smoke-mobile"
+        src="assets/smoke-why-mobile.jpg"
+        loading="lazy"
+        alt="Why Averecs smoke mobile decoration"
+      />
+      <div class="indicators">
+        <div class="indicator active"></div>
+        <div class="indicator"></div>
+        <div class="indicator"></div>
+        <div class="indicator"></div>
       </div>
     </section>
 
-    <section class="our-team">
+    <section class="our-team hidden">
       <span class="title">Our team</span>
       <span class="sub-title">
-        A multi-disciplinar team of eager people trying to disrup the Amazon
+        A multi-disciplinar team of eager people trying to disrupt the Amazon
         Business world
       </span>
-      <div class="cards-container">
-        <div id="our-team-slider" class="slider">
-          <div class="spacer"></div>
-          <div class="card">
-            <img src="assets/our-team-1.png" alt="Our team 1" />
-            <span class="card-title">Daniel Rickwood</span>
-            <span class="card-text">Co-Founder</span>
+      <div id="our-team-slider" class="cards-container slider hidden">
+        <div class="spacer"></div>
+        <div class="card active">
+          <img
+            class="team-image"
+            src="assets/our-team-1.png"
+            loading="lazy"
+            alt="Our team 1"
+          />
+          <span class="card-title">Daniel Rickwood</span>
+          <div class="card-text">
+            <span>Co-Founder</span>
+            <a href="https://www.linkedin.com/in/daniel-rickwood/" class="icon">
+              <img src="assets/linkedin.svg" alt="Linkedin icon" />
+            </a>
           </div>
-          <div class="card">
-            <img src="assets/our-team-2.png" alt="Our team 2" />
-            <span class="card-title">Abel Antunez</span>
-            <span class="card-text">Co-Founder</span>
-          </div>
-          <div class="card">
-            <img src="assets/our-team-3.png" alt="Our team 3" />
-            <span class="card-title">Alfonso Mateos</span>
-            <span class="card-text">Co-Founder</span>
-          </div>
-          <div class="spacer"></div>
         </div>
-        <div class="indicators">
-          <div class="indicator active"></div>
-          <div class="indicator"></div>
-          <div class="indicator"></div>
+        <div class="card">
+          <img
+            class="team-image"
+            src="assets/our-team-2.webp"
+            loading="lazy"
+            alt="Our team 3"
+          />
+          <span class="card-title">Alfonso Mateos</span>
+          <div class="card-text">
+            <span>Co-Founder</span>
+            <a href="https://www.linkedin.com/in/ajmateos/" class="icon">
+              <img src="assets/linkedin.svg" alt="Linkedin icon" />
+            </a>
+          </div>
         </div>
+        <div class="card">
+          <img
+            class="team-image"
+            src="assets/our-team-3.webp"
+            loading="lazy"
+            alt="Our team 2"
+          />
+          <span class="card-title">Abel Antunez</span>
+          <div class="card-text">
+            <span>Co-Founder</span>
+            <a
+              href="https://www.linkedin.com/in/abel-ant%C3%BAnez-de-la-fuente-a3a71a114/"
+              class="icon"
+            >
+              <img src="assets/linkedin.svg" alt="Linkedin icon" />
+            </a>
+          </div>
+        </div>
+        <div class="spacer"></div>
+      </div>
+      <div class="indicators">
+        <div class="indicator active"></div>
+        <div class="indicator"></div>
+        <div class="indicator"></div>
       </div>
       <img
         class="smoke"
         src="assets/smoke-our-team.jpg"
+        loading="lazy"
+        alt="Our team smoke decoration"
+      />
+      <img
+        class="smoke-mobile"
+        src="assets/smoke-our-team-mobile.jpg"
+        loading="lazy"
         alt="Our team smoke decoration"
       />
     </section>
 
-    <section id="contact-us" class="contact-us">
+    <section id="contact-us" class="contact-us hidden">
       <span class="title">Contact us</span>
       <span class="sub-title">
         Would you like to know more? Just drop us a message
       </span>
-      <div class="card">
+      <div class="card hidden">
         <form action="https://formspree.io/f/mjkbvwvv" method="POST">
           <div class="form-group">
             <label>Name</label>
@@ -252,6 +327,7 @@
       <img
         class="smoke"
         src="assets/smoke-footer.jpg"
+        loading="lazy"
         alt="Footer smoke decoration"
       />
     </footer>
