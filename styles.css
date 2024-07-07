@@ -33,10 +33,18 @@ main .smoke {
   top: 0;
   right: 0;
   z-index: -1;
+  display: none;
 
-  width: 31.5rem;
   max-width: 100dvw;
-  height: auto;
+}
+
+main .smoke-mobile {
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: -1;
+
+  width: 100dvw;
 }
 
 main .waves {
@@ -53,7 +61,7 @@ main .waves {
 main .wave {
   position: absolute;
   bottom: 0;
-  left: 0;
+  right: 0;
   width: 200%; /* double width affects below! */
   height: 4rem;
 
@@ -71,7 +79,10 @@ main .wave-1 {
 main .wave-2 {
   background-image: url("assets/wave-2.svg");
 
-  animation: wave-animation 6s linear infinite;
+  /* Faster waves */
+  /* animation: wave-animation 6s linear infinite; */
+  /* Slower waves */
+  animation: wave-animation 15s linear infinite;
   opacity: 0.6;
 }
 
@@ -148,7 +159,7 @@ main .intro-buttons {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap: 1rem;
+  gap: 1.25rem;
 }
 
 main .intro-buttons.mobile {
@@ -270,7 +281,7 @@ main .coming-soon span:nth-of-type(3) {
   font-weight: var(--avr-text-roboto-bold);
   color: var(--avr-color-primary-500);
   padding: 0.25rem 0;
-  margin-bottom: 1rem;
+  margin-bottom: 1.5rem;
   border-bottom: 3px solid;
   border-image: linear-gradient(
       to right,
@@ -283,12 +294,16 @@ main .coming-soon span:nth-of-type(3) {
 .our-platform .card .card-text {
   display: block;
   font-weight: var(--avr-text-roboto-light);
-  font-size: 0.875rem;
+  font-size: 1rem;
 }
 
 .our-platform .card .card-points {
   list-style: none;
   padding-top: 1rem;
+
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
 }
 
 .our-platform .card .card-points li {
@@ -297,11 +312,17 @@ main .coming-soon span:nth-of-type(3) {
 }
 
 .our-platform .card .card-points li::before {
-  content: "•";
+  content: "";
   color: var(--avr-color-surface);
   font-size: 2rem;
 
-  padding-right: 0.5rem;
+  width: 0.45rem;
+  height: 0.45rem;
+  background-color: var(--avr-color-surface);
+  border-radius: 50%;
+
+  margin-right: 0.5rem;
+  /* TODO: bullet point at the start */
 }
 
 .our-platform .card:nth-of-type(2) {
@@ -388,6 +409,8 @@ main .coming-soon span:nth-of-type(3) {
   translate: -50% -10rem;
   width: 6rem;
   height: 6rem;
+
+  background-color: rgba(var(--avr-color-surface-rgb), 0.7);
 }
 
 .why .logo-bubble img {
@@ -408,7 +431,7 @@ main .coming-soon span:nth-of-type(3) {
   height: calc(100dvw - 20dvw);
 
   box-shadow: 0 4px 4px 0 rgba(var(--avr-color-primary-500-rgb), 0.1);
-  backdrop-filter: blur(5px); /* Apply blur to the background */
+  backdrop-filter: blur(15px); /* Apply blur to the background */
   border: 1px solid rgba(var(--avr-color-surface-rgb), 0.6);
 
   /* Carousel styles */
@@ -473,7 +496,8 @@ main .coming-soon span:nth-of-type(3) {
   flex-direction: column;
   align-items: center;
 
-  padding: 2rem 1rem;
+  /* padding: 2rem 1.5rem; */
+  padding: 1.5rem;
 
   /* Carousel styles */
   flex-shrink: 0;
@@ -485,6 +509,8 @@ main .coming-soon span:nth-of-type(3) {
   transition: all 0.25s ease-out;
 
   opacity: 0.8;
+
+  /* TODO: fix in desktop */
 }
 
 .card.active {
@@ -520,8 +546,8 @@ main .coming-soon span:nth-of-type(3) {
 }
 
 .our-team .card .team-image {
-  width: calc(100dvw - 15dvw - 5rem);
-  height: calc(100dvw - 15dvw - 5rem);
+  width: calc(100dvw - 15dvw - 5rem - 2.5rem);
+  height: calc(100dvw - 15dvw - 5rem - 2.5rem);
   border-radius: 100%;
   margin-bottom: 1.5rem;
 }
@@ -541,7 +567,8 @@ main .coming-soon span:nth-of-type(3) {
   font-size: 1rem;
   font-weight: var(--avr-text-roboto-light);
   color: var(--avr-text-primary);
-  padding-bottom: 0.5rem;
+
+  padding-bottom: 1rem;
 }
 
 /* Fourth section: contact us */
@@ -555,7 +582,7 @@ main .coming-soon span:nth-of-type(3) {
   width: 85vw;
   max-width: 64.5rem;
   padding: 2.5rem 2rem;
-  margin-top: 2.5rem;
+  margin-top: 3rem;
 }
 
 form {
@@ -576,6 +603,10 @@ form .form-group {
   font-weight: var(--avr-text-roboto-thin);
 }
 
+.contact-us .sub-title span {
+  display: block;
+}
+
 /* Footer: contact info */
 footer {
   position: relative;
@@ -585,7 +616,7 @@ footer {
 
 footer span {
   display: block;
-  font-size: 0.75rem;
+  font-size: 1rem;
   font-weight: var(--avr-text-roboto-thin);
   color: var(--var-text-primary);
   padding: 2rem 0;
@@ -596,9 +627,20 @@ footer .smoke {
   bottom: 0;
   left: 0;
   z-index: -1;
+  display: none;
 
   width: 50rem;
   max-width: 100dvw;
+  height: 50rem;
+}
+
+footer .smoke-mobile {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  z-index: -1;
+
+  width: 100dvw;
   height: 50rem;
 }
 
@@ -733,7 +775,7 @@ section {
 section .title {
   display: block;
   width: 85vw;
-  max-width: 90rem;
+  max-width: 120rem;
   font-size: 1.5rem;
   font-weight: var(--avr-text-roboto-light);
   text-align: center;
@@ -762,7 +804,7 @@ span {
 
 main,
 section {
-  margin-bottom: 7.5rem;
+  margin-bottom: 10rem;
 }
 
 /* Media queries */
@@ -770,6 +812,7 @@ section {
   /* [MEDIA] Main section */
   main .smoke {
     width: 50rem;
+    display: block;
   }
 
   main {
@@ -796,7 +839,6 @@ section {
   main .intro-buttons {
     display: flex;
     flex-direction: row;
-    gap: 1rem;
   }
 
   main .intro-buttons.mobile {
@@ -843,7 +885,7 @@ section {
     flex-direction: row;
     align-items: center;
     max-width: 50rem;
-    padding: 1.5rem 1.75rem;
+    padding: 2rem;
     margin-top: 3rem;
     border-radius: 32px;
     gap: 2rem;
@@ -863,12 +905,12 @@ section {
 
   .our-platform .card .card-title {
     display: inline-block;
+    font-size: 1.5rem;
   }
 
   .our-platform .text-container {
     width: 100%;
     min-width: 20rem;
-    padding-right: 2.5rem;
   }
 
   .our-platform .card:nth-of-type(2) {
@@ -887,7 +929,7 @@ section {
 
   .our-platform .card:nth-of-type(2) .card-points li::before {
     padding-right: 0;
-    padding-left: 0.5rem;
+    margin-left: 0.5rem;
   }
 
   /* [MEDIA] Second section: why */
@@ -919,6 +961,7 @@ section {
     padding: 3.5rem;
     translate: none;
     left: auto;
+    background-color: rgba(var(--avr-color-surface-rgb), 0.3);
   }
 
   .why .bubble {
@@ -980,6 +1023,14 @@ section {
     max-width: 35rem;
   }
 
+  .contact-us .sub-title span {
+    display: inline-block;
+  }
+
+  footer .smoke {
+    display: block;
+  }
+
   /* Reusable styles */
   .avr-button {
     width: auto;
@@ -993,6 +1044,15 @@ section {
   section .title,
   section .sub-title {
     padding: 1rem 0;
+  }
+
+  section .title {
+    font-size: 2.5rem;
+    border-bottom: 4px solid;
+  }
+
+  section .sub-title {
+    font-size: 1.5rem;
   }
 
   .smoke-mobile {
@@ -1016,7 +1076,7 @@ section {
   }
 
   .our-platform .text-container {
-    padding-right: 5rem;
+    padding-right: 2.5rem;
   }
 
   .our-platform .card:nth-of-type(2) .text-container {
@@ -1025,9 +1085,15 @@ section {
   }
 
   /* [MEDIA] Third section: our team */
+  .our-team .card {
+    padding: 2rem;
+  }
+
   .our-team .card .team-image {
     width: 15rem;
     height: 15rem;
+
+    margin-bottom: 2rem;
   }
 
   .our-team .slider {
@@ -1057,6 +1123,10 @@ section {
   /* [MEDIA] First section: our platform */
   .our-platform .card {
     max-width: 70rem;
+  }
+
+  .our-platform .text-container {
+    padding-right: 5rem;
   }
 
   /* [MEDIA] Second section: why */
@@ -1109,6 +1179,6 @@ section {
     transform: translateX(0);
   }
   100% {
-    transform: translateX(-50%);
+    transform: translateX(50%);
   }
 }
