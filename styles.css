@@ -251,6 +251,7 @@ main .coming-soon span:nth-of-type(3) {
   backdrop-filter: blur(5px);
   overflow: hidden;
 
+  /* TODO: same padding all sides */
   padding: 1.5rem 7.5dvw;
   margin-top: 2.5rem;
 }
@@ -294,7 +295,7 @@ main .coming-soon span:nth-of-type(3) {
 .our-platform .card .card-text {
   display: block;
   font-weight: var(--avr-text-roboto-light);
-  font-size: 1rem;
+  font-size: 0.875rem;
 }
 
 .our-platform .card .card-points {
@@ -1073,6 +1074,10 @@ section {
 
   .our-platform .card {
     max-width: 60rem;
+  }
+
+  .our-platform .card .card-text {
+    font-size: 1rem;
   }
 
   .our-platform .text-container {
