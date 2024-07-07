@@ -18,33 +18,48 @@
     />
     <meta property="og:url" content="https://averecs.com" />
     <meta property="og:site_name" content="Averecs" />
-    <meta property="og:type" content="website" />
+    <meta property="og:width" content="website" />
+    <meta property="og:image:height" content="1200" />
+    <meta property="og:image:type" content="630" />
+    <meta property="og:locale" content="en_GB" />
+
     <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
     <link rel="stylesheet" href="styles.css" />
 
+    <!-- Preload font to avoid resource-blocking resources -->
     <link
+      rel="preload"
       href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&display=swap"
-      rel="stylesheet"
-      defer
+      as="style"
+      onload="this.onload=null;this.rel='stylesheet'"
     />
+    <!-- Fallback if browser doesn't execute JS -->
+    <noscript>
+      <link
+        href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&display=swap"
+        rel="stylesheet"
+        type="text/css"
+      />
+    </noscript>
+
     <script src="app.js" defer></script>
 
     <title>Averecs</title>
   </head>
   <body>
     <main>
-      <img
-        class="smoke"
-        src="assets/smoke-main.webp"
-        loading="lazy"
-        alt="Introduction secttion smoke decoration"
-      />
-      <img
-        class="smoke-mobile"
-        src="assets/smoke-main-mobile.jpg"
-        loading="lazy"
-        alt="Introduction secttion smoke decoration"
-      />
+      <picture>
+        <source
+          media="(min-width: 1024px)"
+          srcset="assets/desktop/smoke-main.webp"
+        />
+        <img
+          src="assets/mobile/smoke-main.webp"
+          alt="Introduction secttion smoke decoration"
+          class="smoke"
+        />
+      </picture>
+
       <div class="hero-card">
         <div class="intro-main">
           <div class="logo-box">
@@ -175,18 +190,20 @@
           </ul>
         </div>
       </div>
-      <img
-        class="smoke"
-        src="assets/smoke-our-platform.webp"
-        loading="lazy"
-        alt="Our platform smoke decoration 1"
-      />
-      <img
-        class="smoke-mobile"
-        src="assets/smoke-our-platform-mobile.jpg"
-        loading="lazy"
-        alt="Our platform smoke decoration 1"
-      />
+
+      <picture>
+        <source
+          media="(min-width: 1024px)"
+          srcset="assets/desktop/smoke-our-platform.webp"
+        />
+
+        <img
+          src="assets/mobile/smoke-our-platform.webp"
+          alt="Our platform smoke decoration 1"
+          loading="lazy"
+          class="smoke"
+        />
+      </picture>
     </section>
 
     <section class="why hidden">
@@ -218,24 +235,27 @@
         </div>
         <div class="main-bubble"></div>
       </div>
-      <img
-        class="smoke"
-        src="assets/smoke-why.jpg"
-        loading="lazy"
-        alt="Why Averecs smoke decoration"
-      />
-      <img
-        class="smoke-mobile"
-        src="assets/smoke-why-mobile.jpg"
-        loading="lazy"
-        alt="Why Averecs smoke mobile decoration"
-      />
+
       <div class="indicators">
         <div class="indicator active"></div>
         <div class="indicator"></div>
         <div class="indicator"></div>
         <div class="indicator"></div>
       </div>
+
+      <picture>
+        <source
+          media="(min-width: 1024px)"
+          srcset="assets/desktop/smoke-why.webp"
+        />
+
+        <img
+          src="assets/mobile/smoke-why.webp"
+          alt="Why Averecs smoke decoration"
+          loading="lazy"
+          class="smoke"
+        />
+      </picture>
     </section>
 
     <section class="our-team hidden">
@@ -309,18 +329,20 @@
         <div class="indicator"></div>
         <div class="indicator"></div>
       </div>
-      <img
-        class="smoke"
-        src="assets/smoke-our-team.jpg"
-        loading="lazy"
-        alt="Our team smoke decoration"
-      />
-      <img
-        class="smoke-mobile"
-        src="assets/smoke-our-team-mobile.jpg"
-        loading="lazy"
-        alt="Our team smoke decoration"
-      />
+
+      <picture>
+        <source
+          media="(min-width: 1024px)"
+          srcset="assets/desktop/smoke-our-team.webp"
+        />
+
+        <img
+          src="assets/mobile/smoke-our-team.webp"
+          alt="Our team smoke decoration"
+          loading="lazy"
+          class="smoke"
+        />
+      </picture>
     </section>
 
     <section id="contact-us" class="contact-us hidden">
@@ -371,12 +393,20 @@
         loading="lazy"
         alt="Footer smoke decoration"
       />
-      <img
-        class="smoke-mobile"
-        src="assets/smoke-footer-mobile.jpg"
-        loading="lazy"
-        alt="Footer smoke decoration"
-      />
+
+      <picture>
+        <source
+          media="(min-width: 1024px)"
+          srcset="assets/desktop/smoke-footer.webp"
+        />
+
+        <img
+          src="assets/mobile/smoke-footer.webp"
+          alt="Footer smoke decoration"
+          loading="lazy"
+          class="smoke"
+        />
+      </picture>
     </footer>
   </body>
 </html>

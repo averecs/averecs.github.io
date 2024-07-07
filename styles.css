@@ -28,25 +28,6 @@ html {
 }
 
 /* Main section */
-main .smoke {
-  position: absolute;
-  top: 0;
-  right: 0;
-  z-index: -1;
-  display: none;
-
-  max-width: 100dvw;
-}
-
-main .smoke-mobile {
-  position: absolute;
-  top: 0;
-  right: 0;
-  z-index: -1;
-
-  width: 100dvw;
-}
-
 main .waves {
   position: relative;
   width: 100%;
@@ -219,20 +200,6 @@ main .coming-soon span:nth-of-type(3) {
 }
 
 /* First section: our platform */
-.our-platform .smoke {
-  position: absolute;
-  z-index: -10;
-  display: none;
-}
-
-.our-platform .smoke-mobile {
-  position: absolute;
-  z-index: -10;
-  width: 100dvw;
-  height: 135rem;
-  bottom: -10rem;
-}
-
 .our-platform {
   position: relative;
 }
@@ -362,20 +329,6 @@ main .coming-soon span:nth-of-type(3) {
   padding: 3rem 0;
 }
 
-.why .smoke {
-  position: absolute;
-  z-index: -2;
-  display: none;
-}
-
-.why .smoke-mobile {
-  position: absolute;
-  z-index: -2;
-  width: 100dvw;
-  height: 40rem;
-  bottom: -7.5rem;
-}
-
 .why .main-bubble,
 .why .logo-bubble,
 .why .bubble {
@@ -456,23 +409,6 @@ main .coming-soon span:nth-of-type(3) {
 }
 
 /* Third section: our team */
-.our-team .smoke {
-  position: absolute;
-  z-index: -3;
-  display: none;
-
-  max-width: 100dvw;
-  bottom: -17.5rem;
-}
-
-.our-team .smoke-mobile {
-  position: absolute;
-  z-index: -3;
-  width: 100dvw;
-  height: 55rem;
-  bottom: -15rem;
-}
-
 .our-team {
   position: relative;
 }
@@ -621,28 +557,6 @@ footer span {
   font-weight: var(--avr-text-roboto-thin);
   color: var(--var-text-primary);
   padding: 2rem 0;
-}
-
-footer .smoke {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  z-index: -1;
-  display: none;
-
-  width: 50rem;
-  max-width: 100dvw;
-  height: 50rem;
-}
-
-footer .smoke-mobile {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  z-index: -1;
-
-  width: 100dvw;
-  height: 50rem;
 }
 
 /* Reusable styles */
@@ -808,14 +722,62 @@ section {
   margin-bottom: 10rem;
 }
 
+/* Smokes */
+main .smoke {
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: -1;
+
+  width: 100dvw;
+}
+
+.our-platform picture img {
+  position: absolute;
+  z-index: -10;
+  bottom: -10rem;
+  left: 50%;
+  transform: translateX(-50%);
+
+  width: 100dvw;
+  height: 135rem;
+}
+
+.why .smoke {
+  position: absolute;
+  z-index: -2;
+  left: 50%;
+  transform: translateX(-50%);
+
+  width: 100dvw;
+  height: 40rem;
+  bottom: -7.5rem;
+}
+
+.our-team .smoke {
+  position: absolute;
+  z-index: -3;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: -15rem;
+
+  width: 100dvw;
+  height: 55rem;
+}
+
+footer .smoke {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  z-index: -1;
+
+  width: 100dvw;
+  height: 50rem;
+}
+
 /* Media queries */
 @media screen and (min-width: 1024px) {
   /* [MEDIA] Main section */
-  main .smoke {
-    width: 50rem;
-    display: block;
-  }
-
   main {
     padding: 4rem 0;
   }
@@ -875,12 +837,6 @@ section {
   }
 
   /* [MEDIA] First section: our platform */
-  .our-platform .smoke {
-    display: block;
-    width: 100dvw;
-    max-width: 100rem;
-    height: 90rem;
-  }
 
   .our-platform .card {
     flex-direction: row;
@@ -934,15 +890,6 @@ section {
   }
 
   /* [MEDIA] Second section: why */
-  .why .smoke {
-    display: block;
-    width: 65rem;
-    height: 60rem;
-    bottom: -10rem;
-
-    z-index: -30;
-  }
-
   .why .bubbles-container {
     justify-content: center;
     min-height: 45rem;
@@ -989,13 +936,6 @@ section {
   }
 
   /* [MEDIA] Third section: our team */
-  .our-team .smoke {
-    display: block;
-    bottom: -15rem;
-    height: 50rem;
-    width: 75rem;
-  }
-
   section.our-team .sub-title {
     width: 35vw;
   }
@@ -1028,10 +968,6 @@ section {
     display: inline-block;
   }
 
-  footer .smoke {
-    display: block;
-  }
-
   /* Reusable styles */
   .avr-button {
     width: auto;
@@ -1056,8 +992,28 @@ section {
     font-size: 1.5rem;
   }
 
-  .smoke-mobile {
-    display: none;
+  /* [MEDIA]: Smokes */
+  main .smoke {
+    width: 50rem;
+  }
+
+  .our-platform picture img {
+    width: 100dvw;
+    max-width: 100rem;
+    height: 90rem;
+  }
+
+  .why .smoke {
+    z-index: -30;
+    bottom: -10rem;
+
+    width: 65rem;
+    height: 60rem;
+  }
+
+  .our-team .smoke {
+    width: 75rem;
+    height: 50rem;
   }
 }
 
@@ -1069,7 +1025,7 @@ section {
 
   /* [MEDIA] First section: our platform */
   .our-platform .smoke {
-    height: 110rem;
+    height: 120rem;
   }
 
   .our-platform .card {
@@ -1154,9 +1110,8 @@ section {
     height: 20rem;
   }
 
-  /* [MEDIA] Footer: contact info */
   footer .smoke {
-    width: 65rem;
+    max-width: 150rem;
   }
 }
 
