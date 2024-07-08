@@ -123,6 +123,7 @@ main .logo-box {
 
 .logo-box img {
   width: 100%;
+  aspect-ratio: 177/40;
 }
 
 main .logo-box span {
@@ -223,16 +224,25 @@ main .coming-soon span:nth-of-type(3) {
   margin-top: 2.5rem;
 }
 
-.our-platform .card img {
+.our-platform .card a {
+  position: relative;
+  margin: 1rem 0 1.5rem 0;
   width: 100%;
+  aspect-ratio: 45/32;
+}
 
+.our-platform .card img {
   border: 2px solid var(--avr-color-surface);
   border-radius: 8px;
   box-shadow: 0 4px 4px 0 rgba(var(--avr-color-primary-500-rgb), 0.1);
-}
 
-.our-platform .card a {
-  padding: 1rem 0 1.5rem 0;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  object-position: center;
+  position: absolute;
+  top: 0;
+  left: 0;
 }
 
 .card-title-mobile {
@@ -723,6 +733,10 @@ section {
 }
 
 /* Smokes */
+.smoke {
+  user-select: none;
+}
+
 main .smoke {
   position: absolute;
   top: 0;
@@ -853,7 +867,7 @@ footer .smoke {
   }
 
   .our-platform .card a {
-    padding: 0;
+    margin: 0;
   }
 
   .our-platform .card-title-mobile {
