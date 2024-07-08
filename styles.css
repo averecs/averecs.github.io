@@ -339,6 +339,11 @@ main .coming-soon span:nth-of-type(3) {
   padding: 3rem 0;
 }
 
+/* Hide scrollbar in safari */
+.why .bubbles-container::-webkit-scrollbar {
+  display: none;
+}
+
 .why .main-bubble,
 .why .logo-bubble,
 .why .bubble {
