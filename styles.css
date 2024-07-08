@@ -740,6 +740,7 @@ section {
 /* Smokes */
 .smoke {
   user-select: none;
+  max-width: 100dvw;
 }
 
 main .smoke {
@@ -798,13 +799,16 @@ footer .smoke {
 @media screen and (min-width: 1024px) {
   /* [MEDIA] Main section */
   main {
-    padding: 4rem 0;
+    height: 100dvh;
+    max-height: 62rem;
+    padding: 0;
+    margin-bottom: 5rem;
   }
 
   main .hero-card {
     flex-direction: row;
-    padding: 10dvw 10dvw;
-    gap: 3rem;
+    padding: 10dvw 9dvw;
+    gap: 2rem;
   }
 
   main .logo-box {
@@ -813,9 +817,9 @@ footer .smoke {
   }
 
   main .logo-box span {
-    font-size: 1.125rem;
+    font-size: 1rem;
     text-align: start;
-    max-width: 11.25rem;
+    max-width: 10rem;
   }
 
   main .intro-buttons {
@@ -1039,7 +1043,21 @@ footer .smoke {
 @media screen and (min-width: 1440px) {
   /* [MEDIA] Main section */
   main {
-    padding: 5rem 0;
+    margin-bottom: 10rem;
+  }
+
+  main .hero-card {
+    padding: 12dvw 10dvw;
+    gap: 3rem;
+  }
+
+  main .logo-box {
+    gap: 2rem;
+  }
+
+  main .logo-box span {
+    font-size: 1.25rem;
+    max-width: 12.5rem;
   }
 
   /* [MEDIA] First section: our platform */
@@ -1085,10 +1103,6 @@ footer .smoke {
   /* [MEDIA] Main section */
   main .smoke {
     width: 90rem;
-  }
-
-  main {
-    padding: 11rem 0;
   }
 
   main .hero-card {
