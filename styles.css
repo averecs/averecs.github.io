@@ -38,6 +38,7 @@ main .waves {
   box-shadow: 0 0 10px 5px rgba(var(--avr-color-primary-500-rgb), 0.25);
 
   overflow: hidden;
+  isolation: isolate;
 }
 
 main .wave-container {
