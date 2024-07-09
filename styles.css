@@ -37,43 +37,40 @@ main .waves {
   border-radius: 50%;
   box-shadow: 0 0 10px 5px rgba(var(--avr-color-primary-500-rgb), 0.25);
 
-  /* Trying to fix issues in tablet */
-  overflow: hidden !important;
-  overflow-x: hidden !important;
+  overflow: hidden;
 }
 
-main .wave {
+main .wave-container {
   position: absolute;
-  z-index: -1;
   bottom: 0;
   right: 0;
-  /* double width affects below! */
   width: 200%;
   height: 4rem;
-  margin-bottom: -5px;
-
-  background-repeat: repeat-x;
-  /* half of the width important! */
-  -webkit-background-size: 50% 100%;
-  -moz-background-size: 50% 100%;
-  background-size: 50% 100%;
-  -o-background-size: 50% 100%;
+  display: flex;
 }
 
 main .wave-1 {
-  background-image: url("assets/wave-1.svg");
-
   animation: wave-animation 5s linear infinite;
-  opacity: 0.8;
 }
 
 main .wave-2 {
-  background-image: url("assets/wave-2.svg");
-
   /* Faster waves */
   /* animation: wave-animation 6s linear infinite; */
   /* Slower waves */
   animation: wave-animation 15s linear infinite;
+}
+
+main .wave {
+  width: 50%;
+  height: 100%;
+  height: 4rem;
+}
+
+main .wave-1 {
+  opacity: 0.8;
+}
+
+main .wave-2 {
   opacity: 0.6;
 }
 
