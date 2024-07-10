@@ -917,7 +917,7 @@ footer .smoke {
   }
 
   .our-platform .card:nth-of-type(2) .card-points li::before {
-    padding-right: 0;
+    margin-right: 0;
     margin-left: 0.5rem;
   }
 
@@ -1111,7 +1111,7 @@ footer .smoke {
 @media screen and (min-width: 1920px) {
   /* [MEDIA] Main section */
   main .smoke {
-    width: 90rem;
+    width: 75rem;
   }
 
   main .hero-card {
