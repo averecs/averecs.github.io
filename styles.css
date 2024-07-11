@@ -1,10 +1,11 @@
 /* Variables */
 :root {
   --avr-text-primary: #313131;
+  --avr-text-primary-rgb: 49, 49, 49;
   --avr-color-surface: #fff;
   --avr-color-surface-rgb: 255, 255, 255;
-  --avr-color-primary-500: #6034e7;
-  --avr-color-primary-500-rgb: 96, 52, 231;
+  --avr-color-primary-500: #5d24e3;
+  --avr-color-primary-500-rgb: 93, 36, 227;
   --avr-color-smoke-contrast-rgb: 245, 133, 240;
   --avr-text-roboto-thin: 100;
   --avr-text-roboto-light: 300;
@@ -288,7 +289,10 @@ main .coming-soon span:nth-of-type(3) {
 
 .our-platform .card .card-points li {
   display: flex;
-  align-items: center;
+  align-items: flex-start;
+
+  position: relative;
+  padding-left: 1rem;
 }
 
 .our-platform .card .card-points li::before {
@@ -296,13 +300,18 @@ main .coming-soon span:nth-of-type(3) {
   color: var(--avr-color-surface);
   font-size: 2rem;
 
-  width: 0.45rem;
-  height: 0.45rem;
-  background-color: var(--avr-color-surface);
+  width: 0.35rem;
+  height: 0.35rem;
+  background-color: rgba(var(--avr-text-primary-rgb), 0.7);
   border-radius: 50%;
 
-  margin-right: 0.5rem;
-  /* TODO: bullet point at the start */
+  flex-shrink: 0;
+
+  /* Bullet point at the start */
+  position: absolute;
+  left: 0;
+  top: 0.55rem;
+  transform: translateY(-50%);
 }
 
 .our-platform .card:nth-of-type(2) {
@@ -623,6 +632,11 @@ footer span {
   opacity: 0.8;
 }
 
+.avr-button.secondary {
+  background-color: #bea7f4;
+  border: 1px solid transparent;
+}
+
 .avr-input,
 .avr-textarea {
   width: 100%;
@@ -642,11 +656,19 @@ footer span {
   border-radius: 32px;
 }
 
+.avr-input.secondary {
+  border: 1px solid #a6a6a6;
+}
+
 .avr-input::placeholder,
 .avr-textarea::placeholder {
   font-size: 1rem;
   font-weight: var(--avr-text-roboto-thin);
   color: rgba(var(--avr-color-primary-500-rgb), 0.5);
+}
+
+.avr-input.secondary::placeholder {
+  color: #a6a6a6;
 }
 
 .avr-input:focus,
@@ -902,6 +924,10 @@ footer .smoke {
     min-width: 20rem;
   }
 
+  .our-platform .card .card-points li::before {
+    top: 0.6rem;
+  }
+
   .our-platform .card:nth-of-type(2) {
     flex-direction: row-reverse;
   }
@@ -914,11 +940,13 @@ footer .smoke {
 
   .our-platform .card:nth-of-type(2) .card-points li {
     flex-direction: row-reverse;
+    padding-left: 0;
+    padding-right: 1rem;
   }
 
   .our-platform .card:nth-of-type(2) .card-points li::before {
-    margin-right: 0;
-    margin-left: 0.5rem;
+    right: 0;
+    left: auto;
   }
 
   /* [MEDIA] Second section: why */
