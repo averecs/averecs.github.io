@@ -1,6 +1,6 @@
 <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-<rect width="32" height="32" rx="5" fill="#3A1F8B" style="fill:#3A1F8B;fill:color(display-p3 0.2275 0.1216 0.5451);fill-opacity:1;"/>
-<path d="M12.4859 5L3.5 27.3214H8.60963L15.3637 11.5341L12.4859 5Z" fill="white" style="fill:white;fill-opacity:1;"/>
-<path d="M3.5 27.3214H8.59362C11.653 21.2757 16.2041 21.0819 19.6511 21.9481C13.8699 17.1369 5.75632 19.6266 3.5 27.3214Z" fill="white" style="fill:white;fill-opacity:1;"/>
-<path d="M19.5143 5H12.4665L21.8831 27.3214H28.5002L19.5143 5Z" fill="white" style="fill:white;fill-opacity:1;"/>
+<rect width="32" height="32" rx="5" fill="#F5F5F5" style="fill:#F5F5F5;fill:color(display-p3 0.9608 0.9608 0.9608);fill-opacity:1;"/>
+<path d="M12.4859 5L3.5 27.3214H8.60963L15.3637 11.5341L12.4859 5Z" fill="#2D045B" style="fill:#2D045B;fill:color(display-p3 0.1765 0.0157 0.3569);fill-opacity:1;"/>
+<path d="M3.5 27.3214H8.59362C11.653 21.2757 16.2041 21.0819 19.6511 21.9481C13.8699 17.1369 5.75632 19.6266 3.5 27.3214Z" fill="#5D24E3" style="fill:#5D24E3;fill:color(display-p3 0.3647 0.1412 0.8902);fill-opacity:1;"/>
+<path d="M19.5141 5H12.4663L21.8829 27.3214H28.5L19.5141 5Z" fill="#5D24E3" style="fill:#5D24E3;fill:color(display-p3 0.3647 0.1412 0.8902);fill-opacity:1;"/>
 </svg>
