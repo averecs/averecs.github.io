@@ -542,6 +542,10 @@ main .coming-soon span:nth-of-type(3) {
 }
 
 /* Fourth section: contact us */
+.contact-us {
+  scroll-margin-top: 7.5rem;
+}
+
 .contact-us .card {
   background-color: rgba(var(--avr-color-surface-rgb), 0.32);
   border-radius: 32px;
@@ -1196,6 +1200,7 @@ footer .smoke {
 .show {
   opacity: 1;
   transform: translateY(0);
+  scroll-margin-top: 2.5rem;
 }
 
 @media (prefers-reduced-motion) {
