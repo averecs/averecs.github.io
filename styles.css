@@ -91,7 +91,7 @@ main .hero-card {
   border-radius: 50px;
   border: 1px solid var(--avr-color-surface);
   box-shadow: 0 4px 4px 0 rgba(var(--avr-color-primary-500-rgb), 0.1);
-  backdrop-filter: blur(5px);
+  /* backdrop-filter: blur(5px); REALLY BAD PERFORMANCE */
 
   display: flex;
   flex-direction: column;
@@ -220,7 +220,7 @@ main .coming-soon span:nth-of-type(3) {
   border-radius: 0;
   border: 1px solid var(--avr-color-surface);
   box-shadow: 0 4px 4px 0 rgba(var(--avr-color-primary-500-rgb), 0.1);
-  backdrop-filter: blur(5px);
+  /* backdrop-filter: blur(5px); REALLY BAD PERFORMANCE */
   overflow: hidden;
 
   padding: 1.5rem 7.5dvw;
@@ -411,7 +411,8 @@ main .coming-soon span:nth-of-type(3) {
   height: calc(100dvw - 20dvw);
 
   box-shadow: 0 4px 4px 0 rgba(var(--avr-color-primary-500-rgb), 0.1);
-  backdrop-filter: blur(15px); /* Apply blur to the background */
+  /* Blur has a really bad performance in some browsers (chrome) */
+  backdrop-filter: blur(5px);
   border: 1px solid rgba(var(--avr-color-surface-rgb), 0.6);
 
   /* Carousel styles */
